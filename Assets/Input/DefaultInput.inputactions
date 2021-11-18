@@ -1,0 +1,11 @@
+{
+    "name": "DefaultInput",
+    "maps": [],
+    "controlSchemes": [
+        {
+            "name": "PC",
+            "bindingGroup": "PC",
+            "devices": []
+        }
+    ]
+}
