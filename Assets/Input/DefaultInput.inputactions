@@ -31,7 +31,7 @@
                 },
                 {
                     "name": "Jump",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "62f6161d-f0fb-4c28-84fe-34743469cb35",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -88,7 +88,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC",
+                    "groups": "",
                     "action": "Walk",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -99,7 +99,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC",
+                    "groups": "",
                     "action": "Walk",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -231,7 +231,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC",
+                    "groups": "",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -524,11 +524,5 @@
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "PC",
-            "bindingGroup": "PC",
-            "devices": []
-        }
-    ]
+    "controlSchemes": []
 }

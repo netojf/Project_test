@@ -535,11 +535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730407193010224282, guid: 52557af1c73c0134095d30cc2c65fde6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.32
+      value: -6.04
       objectReference: {fileID: 0}
     - target: {fileID: 7730407193010224282, guid: 52557af1c73c0134095d30cc2c65fde6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.09
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 7730407193010224282, guid: 52557af1c73c0134095d30cc2c65fde6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -814,6 +814,8 @@ GameObject:
   - component: {fileID: 1646046284}
   - component: {fileID: 1646046283}
   - component: {fileID: 1646046285}
+  - component: {fileID: 1646046286}
+  - component: {fileID: 1646046287}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -841,7 +843,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &1646046284
 Transform:
   m_ObjectHideFlags: 0
@@ -884,7 +886,19 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1646046286}
+        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+        m_MethodName: WalkInputReceived
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f031b4d2-c0f4-4c25-9694-2349b09249b8
     m_ActionName: Character/Walk
   - m_PersistentCalls:
@@ -896,19 +910,7 @@ MonoBehaviour:
     m_ActionId: 13289163-4dfb-488f-9d5a-bf51952f9268
     m_ActionName: Character/Dash Left
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1830901150}
-        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: c29cf3c80fb31cc4cb10b8456ab2a79d, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 62f6161d-f0fb-4c28-84fe-34743469cb35
     m_ActionName: Character/Jump
   - m_PersistentCalls:
@@ -944,11 +946,33 @@ MonoBehaviour:
   m_DefaultActionMap: Character
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!212 &1830901150 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7730407193010224281, guid: 52557af1c73c0134095d30cc2c65fde6, type: 3}
-  m_PrefabInstance: {fileID: 409379732}
+--- !u!114 &1646046286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646046282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43b49d5c4ae29849b7854a712653f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledTransform: {fileID: 1646046284}
+  moveDirection: {x: 0, y: 0}
+  moveSpeed: 2
+--- !u!114 &1646046287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646046282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bc6f20d06a16d488aa3089a11b4d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2015361110
 PrefabInstance:
   m_ObjectHideFlags: 0
