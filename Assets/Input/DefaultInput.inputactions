@@ -231,7 +231,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PC",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
